@@ -48,7 +48,8 @@ for epoch in range(num_epochs):
             "train_accuracy": train_acc,
             "val_loss": val_loss,
             "val_accuracy": val_acc,
-        }, checkpoint_name)
+            'epoch': epoch,
+        }, 'checkpoint.pth')
         print(f"Model checkpoint saved: {checkpoint_name}")
 
         # Удаление старых чекпоинтов, если их больше 10
